@@ -1,0 +1,118 @@
+﻿@using Covoiturage.Controllers.Utilisateurs
+
+@{
+    Layout = "_LayoutPassager";
+    ViewData["Title"] = "Trajets Disponibles";
+    var trajetsDisponibles = ViewData["TrajetsDisponibles"] as List<PassagerController.TrajetDisponibleDto>;
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Trajets Disponibles</h2>
+
+    @if (trajetsDisponibles != null && trajetsDisponibles.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Départ</th>
+                        <th>Arrivée</th>
+                        <th>Date départ</th>
+                        <th>Prix (Ar)</th>
+                        <th>Places disponibles</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < trajetsDisponibles.Count; i++)
+                    {
+                        var td = trajetsDisponibles[i];
+                        <tr>
+                            <td>@(i + 1)</td>
+                            <td>@td.Trajet.Depart</td>
+                            <td>@td.Trajet.Arrivee</td>
+                            <td>@(td.Trajet.DateDepart.HasValue ? td.Trajet.DateDepart.Value.ToString("dd/MM/yyyy HH:mm") : "-")</td>
+                            <td>@(td.Trajet.PrixUniquePlace?.ToString("N0") ?? "-")</td>
+                            <td>@td.PlacesLibres</td>
+                            <td>
+                                @if (td.PlacesLibres > 0)
+                                {
+                                    <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#reserverModal" data-trajetid="@td.Trajet.Id" data-placeslibres="@td.PlacesLibres">
+                                        Réserver
+                                    </button>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger">Complet</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info text-center">
+            Aucun trajet disponible pour le moment.
+        </div>
+    }
+</div>
+
+<!-- Modal Réservation -->
+<div class="modal fade" id="reserverModal" tabindex="-1" aria-labelledby="reserverModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="formReserver" method="post" action="@Url.Action("Reserver", "Passager")">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reserverModalLabel">Réserver un trajet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="trajetid" id="modalTrajetId" />
+
+                    <div class="mb-3">
+                        <label for="nombreplace" class="form-label">Nombre de places</label>
+                        <input type="number" class="form-control" id="nombreplace" name="nombreplace" value="1" min="1" required />
+                        <div id="placesLibresInfo" class="form-text text-end"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="lieuderecuperation" class="form-label">Lieu de récupération</label>
+                        <input type="text" class="form-control" id="lieuderecuperation" name="lieuderecuperation" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="destination" class="form-label">Destination</label>
+                        <input type="text" class="form-control" id="destination" name="destination" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="submit" class="btn btn-primary">Réserver</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+<script>
+    var reserverModal = document.getElementById('reserverModal')
+    reserverModal.addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget
+        var trajetId = button.getAttribute('data-trajetid')
+        var placesLibres = button.getAttribute('data-placeslibres')
+
+        // Remplir le modal
+        document.getElementById('modalTrajetId').value = trajetId
+        var inputNombre = document.getElementById('nombreplace')
+        inputNombre.max = placesLibres
+        inputNombre.value = 1
+
+        document.getElementById('placesLibresInfo').textContent = "Places disponibles : " + placesLibres
+    })
+</script>
+}

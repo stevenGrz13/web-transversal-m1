@@ -1,0 +1,109 @@
+﻿@{
+    Layout = "_LayoutPassager";
+    ViewData["Title"] = "Mes Voyages";
+    var voyages = ViewData["voyages"] as List<Voyage>;
+    double totalDepense = (double)ViewData["TotalDepense"];
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Mes Voyages</h2>
+
+    @if (voyages != null && voyages.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover align-middle text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Départ</th>
+                        <th>Arrivée</th>
+                        <th>Date départ</th>
+                        <th>Prix (Ar)</th>
+                        <th>Lieu récupération</th>
+                        <th>Destination</th>
+                        <th>Statut paiement</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int compteur = 1;
+                    }
+                    @foreach (var voyage in voyages)
+                    {
+                        <tr>
+                            <td>@compteur</td>
+                            <td>@voyage.Trajet?.Depart</td>
+                            <td>@voyage.Trajet?.Arrivee</td>
+                            <td>@voyage.Trajet?.DateDepart?.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>@voyage.Trajet?.PrixUniquePlace?.ToString("N0")</td>
+                            <td>@voyage.LieuRecuperation</td>
+                            <td>@voyage.Destination</td>
+                            <td>
+                                @if (voyage.EstPayee == true)
+                                {
+                                    <span class="badge bg-success">Payé</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-warning text-dark">Non payé</span>
+                                }
+                            </td>
+                            <td>
+                                @if (voyage.EstPayee != true)
+                                {
+                                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#payModal-@voyage.Id">
+                                        Payer
+                                    </button>
+                                }
+                            </td>
+                        </tr>
+
+                        <!-- Modal de paiement -->
+                        <div class="modal fade" id="payModal-@voyage.Id" tabindex="-1" aria-labelledby="payModalLabel-@voyage.Id" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="payModalLabel-@voyage.Id">Payer le voyage</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <form method="post" action="@Url.Action("PayVoyage", "Voyage")">
+                                        <div class="modal-body">
+                                            <input type="hidden" name="idvoyage" value="@voyage.Id" />
+                                            <div class="mb-3">
+                                                <label class="form-label">Montant à payer (Ar)</label>
+                                                <input type="text" class="form-control" value="@voyage.Trajet?.PrixUniquePlace?.ToString("N0")" disabled />
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Confirmer le paiement</label>
+                                                <input type="checkbox" name="confirmPayment" required /> Oui, je souhaite payer
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                            <button type="submit" class="btn btn-success">Payer</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        compteur++;
+                    }
+                </tbody>
+                <tfoot class="table-secondary text-center">
+                    <tr>
+                        <td colspan="4" class="text-end"><strong>Total dépensé :</strong></td>
+                        <td colspan="5">@totalDepense.ToString("N0") Ar</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info text-center">
+            Vous n'avez aucun voyage pour le moment.
+        </div>
+    }
+</div>

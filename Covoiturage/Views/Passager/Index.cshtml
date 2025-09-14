@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "_LayoutPassager";
+    var user = ViewData["utilisateur"] as Covoiturage.Models.Utilisateur;
+}
+
+<h2 class="mb-4">Mon Profil</h2>
+
+@if (user != null)
+{
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h4 class="card-title">@user.Nom</h4>
+            <p class="card-text text-muted mb-3">
+                <strong>Rôle :</strong> @(user.Role?.Nom ?? "Non défini")
+            </p>
+
+            <table class="table table-bordered">
+                <tbody>
+                <tr>
+                    <th style="width:30%">Email</th>
+                    <td>@user.Email</td>
+                </tr>
+                <tr>
+                    <th>Numéro</th>
+                    <td>@user.Numero</td>
+                </tr>
+                <tr>
+                    <th>Date de création</th>
+                    <td>@user.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <a asp-controller="Home" asp-action="LogOutAction" class="btn btn-danger mt-3">
+                Se déconnecter
+            </a>
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning">
+        Impossible de charger votre profil. Veuillez vous reconnecter.
+    </div>
+}

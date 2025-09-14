@@ -1,0 +1,243 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Covoiturage
+build_property.RootNamespace = Covoiturage
+build_property.ProjectDir = D:\STEVEN\Etudes\M1\Web-Avance\Projet-Transversal\Covoiturage\Covoiturage\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\STEVEN\Etudes\M1\Web-Avance\Projet-Transversal\Covoiturage\Covoiturage
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Admin/Profil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvZmlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Admin/TableauDeBord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVGFibGVhdURlQm9yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Commission/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWlzc2lvblxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Commission/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWlzc2lvblxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Commission/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWlzc2lvblxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Commission/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWlzc2lvblxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Commission/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWlzc2lvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Depense/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwZW5zZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Depense/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwZW5zZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Depense/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwZW5zZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Depense/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwZW5zZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Depense/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwZW5zZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Home/AcceuilAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2NldWlsQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Home/AcceuilChauffeur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2NldWlsQ2hhdWZmZXVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Home/AcceuilUtilisateur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2NldWlsVXRpbGlzYXRldXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Passager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzc2FnZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Passager/Trajets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzc2FnZXJcVHJhamV0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Passager/Voyages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzc2FnZXJcVm95YWdlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Role/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Role/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Role/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Role/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Role/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Trajet/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhamV0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Trajet/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhamV0XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Trajet/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhamV0XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Trajet/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhamV0XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Trajet/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhamV0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Utilisateur/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Utilisateur/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Utilisateur/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Utilisateur/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Utilisateur/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Vehicule/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bGVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Vehicule/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bGVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Vehicule/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bGVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Vehicule/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bGVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Vehicule/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Voyage/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm95YWdlXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Voyage/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm95YWdlXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Voyage/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm95YWdlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Voyage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm95YWdlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Voyage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm95YWdlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-rz8ekify0m
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-i14zdz306b
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Shared/_LayoutChauffeur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRDaGF1ZmZldXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-fk61hhcrk0
+
+[D:/STEVEN/Etudes/M1/Web-Avance/Projet-Transversal/Covoiturage/Covoiturage/Views/Shared/_LayoutPassager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRQYXNzYWdlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-kimhmeyogz

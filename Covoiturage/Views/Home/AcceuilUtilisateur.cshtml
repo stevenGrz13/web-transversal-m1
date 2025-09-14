@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Accueil Passager";
+    Layout = "_LayoutPassager";
+
+    Commission pourcentageCommission = ViewData["PourcentageCommission"] as Commission;
+}
+
+<div class="container my-5">
+
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold"> Bonjour, bienvenue sur Co-vaika</h1>
+        <p class="lead mt-3">
+            Découvrez notre service de covoiturage simple, économique et sécurisé.
+        </p>
+    </div>
+
+    <div class="row g-4">
+        <!-- Abonnement Chauffeur -->
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0 h-100">
+                <div class="card-body text-center">
+                    <h3 class="card-title text-primary"> Abonnement Chauffeur</h3>
+                    <p class="fs-5 mt-3">20 000 Ar / mois</p>
+                    <p class="text-muted">
+                        Publiez vos trajets, gagnez de l’argent et contribuez à la mobilité partagée.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Abonnement Passager -->
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0 h-100">
+                <div class="card-body text-center">
+                    <h3 class="card-title text-success"> Abonnement Passager</h3>
+                    <p class="fs-5 mt-3">15 000 Ar / mois</p>
+                    <p class="text-muted">
+                        Réservez vos places en toute simplicité, voyagez moins cher et en toute sécurité.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5" />
+
+    <div class="text-center">
+        <h4 class="fw-bold">Commission sur chaque voyage</h4>
+        <p class="fs-5 mt-3">
+            Pour chaque place vendue, <strong>Co-vaika</strong> prélève une commission de
+            <strong class="text-danger">@pourcentageCommission.Pourcentage %</strong> sur le prix de la place.
+        </p>
+        <p class="text-muted">
+            Cette commission est automatiquement déduite du montant reversé au chauffeur.
+        </p>
+    </div>
+
+    <hr class="my-5" />
+
+    <section class="mt-4">
+        <h4 class="fw-bold mb-3"> Bonnes pratiques & règles de respect</h4>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Soyez ponctuels aux lieux de rendez-vous.</li>
+            <li class="list-group-item">Respectez les autres utilisateurs : politesse et courtoisie sont essentielles.</li>
+            <li class="list-group-item">Interdiction de fumer ou de consommer de l’alcool pendant le trajet.</li>
+            <li class="list-group-item">Prévenez au plus tôt en cas d’annulation de voyage.</li>
+            <li class="list-group-item">Toute tentative de fraude ou de non-paiement entraînera la suspension du compte.</li>
+        </ul>
+    </section>
+
+</div>
