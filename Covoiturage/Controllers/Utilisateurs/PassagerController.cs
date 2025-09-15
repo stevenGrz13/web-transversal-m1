@@ -111,4 +111,13 @@ public class PassagerController : Controller
 
         return Ok();
     }
+    
+    public IActionResult MesAbonnements()
+    {
+        var abonnements = _context.AbonnementUtilisateurs
+            .Where(a => a.IdUtilisateur == UserId.Value)
+            .ToList();
+        ViewData["abonnements"] = abonnements;
+        return View("~/Views/Passager/Abonnements.cshtml");
+    }
 }

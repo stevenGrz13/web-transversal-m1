@@ -1,0 +1,79 @@
+﻿@using Covoiturage.Models
+@{
+    ViewData["Title"] = "Mes véhicules";
+    var listevehicule = ViewData["listevehicule"] as List<Vehicule>;
+    Layout = "_LayoutChauffeur";
+}
+
+<h2 class="mb-4">Mes véhicules</h2>
+
+@if (listevehicule == null || !listevehicule.Any())
+{
+    <div class="alert alert-info">Aucun véhicule enregistré.</div>
+}
+else
+{
+    <table class="table table-striped table-hover align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>Marque</th>
+                <th>Modèle</th>
+                <th>Plaque</th>
+                <th>Nombre de places</th>
+                <th>Détails</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var v in listevehicule)
+        {
+            <tr>
+                <td>@v.Marque</td>
+                <td>@v.Modele</td>
+                <td>@v.Plaque</td>
+                <td>@v.NombrePlace</td>
+                <td>
+                    <!-- Bouton qui déclenche le modal -->
+                    <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#vehiculeModal-@v.Id">
+                        Voir détails
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="vehiculeModal-@v.Id" tabindex="-1" aria-labelledby="vehiculeModalLabel-@v.Id" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header bg-primary text-white">
+                                    <h5 class="modal-title" id="vehiculeModalLabel-@v.Id">
+                                        Détails du véhicule
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><strong>Marque :</strong> @v.Marque</li>
+                                        <li class="list-group-item"><strong>Modèle :</strong> @v.Modele</li>
+                                        <li class="list-group-item"><strong>Plaque :</strong> @v.Plaque</li>
+                                        <li class="list-group-item"><strong>Nombre de places :</strong> @v.NombrePlace</li>
+                                        <a class="btn btn-outline-primary"
+                                           asp-controller="Chauffeur"
+                                           asp-action="TrajetsParVehicule"
+                                           asp-route-idVehicule="@v.Id">
+                                            Les trajets
+                                        </a>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+<!-- Si tu n'as pas déjà les scripts bootstrap dans le layout, ajoute ceci dans _Layout.cshtml juste avant </body> :
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+-->

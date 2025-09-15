@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Tous mes trajets";
+    var trajets = ViewData["trajets"] as List<Covoiturage.Models.Trajet>;
+    Layout = "_LayoutChauffeur";
+}
+
+<h2 class="mb-4">Tous mes trajets</h2>
+
+@if (trajets == null || !trajets.Any())
+{
+    <div class="alert alert-info">Aucun trajet trouvé.</div>
+}
+else
+{
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Départ</th>
+                <th>Arrivée</th>
+                <th>Date</th>
+                <th>Prix</th>
+                <th>Places</th>
+                <th>Détails</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var t in trajets)
+            {
+                <tr>
+                    <td>@t.Depart</td>
+                    <td>@t.Arrivee</td>
+                    <td>@t.DateDepart</td>
+                    <td>@t.PrixUniquePlace?.ToString("N0") Ar</td>
+                    <td>@t.Vehicule.NombrePlace</td>
+                    <td>
+                        <button type="button" class="btn btn-primary btn-sm"
+                                data-bs-toggle="modal" data-bs-target="#trajetModal_@t.Id">
+                            Voir détails
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="trajetModal_@t.Id" tabindex="-1"
+                             aria-labelledby="trajetModalLabel_@t.Id" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="trajetModalLabel_@t.Id">
+                                            Détails du trajet
+                                        </h5>
+                                        <button type="button" class="btn-close"
+                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p><strong>Départ :</strong> @t.Depart</p>
+                                        <p><strong>Arrivée :</strong> @t.Arrivee</p>
+                                        <p><strong>Date :</strong> @t.DateDepart</p>
+                                        <p><strong>Prix :</strong> @t.PrixUniquePlace Ar</p>
+                                        <p><strong>Places disponibles :</strong> @t.Vehicule.NombrePlace</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                            Fermer
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

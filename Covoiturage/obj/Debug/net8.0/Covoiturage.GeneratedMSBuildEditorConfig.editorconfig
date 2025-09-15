@@ -54,6 +54,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVGFibGVhdURlQm9yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/STEVEN/Exams/M1/transversal/web-transversal-m1/Covoiturage/Views/Chauffeur/Abonnements.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdWZmZXVyXEFib25uZW1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Exams/M1/transversal/web-transversal-m1/Covoiturage/Views/Chauffeur/AllTrajet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdWZmZXVyXEFsbFRyYWpldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Exams/M1/transversal/web-transversal-m1/Covoiturage/Views/Chauffeur/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdWZmZXVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Exams/M1/transversal/web-transversal-m1/Covoiturage/Views/Chauffeur/TrajetsParVehicule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdWZmZXVyXFRyYWpldHNQYXJWZWhpY3VsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Exams/M1/transversal/web-transversal-m1/Covoiturage/Views/Chauffeur/Vehicules.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdWZmZXVyXFZlaGljdWxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/STEVEN/Exams/M1/transversal/web-transversal-m1/Covoiturage/Views/Commission/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWlzc2lvblxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -116,6 +136,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/STEVEN/Exams/M1/transversal/web-transversal-m1/Covoiturage/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/STEVEN/Exams/M1/transversal/web-transversal-m1/Covoiturage/Views/Passager/Abonnements.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzc2FnZXJcQWJvbm5lbWVudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/STEVEN/Exams/M1/transversal/web-transversal-m1/Covoiturage/Views/Passager/Index.cshtml]

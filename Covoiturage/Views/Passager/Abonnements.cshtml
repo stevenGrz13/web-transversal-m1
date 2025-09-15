@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Mes Abonnements";
+    var abonnements = ViewData["abonnements"] as List<Covoiturage.Models.AbonnementUtilisateur>;
+
+    Layout = "_LayoutPassager";
+
+    // Petit helper pour convertir l'ID du mois en texte
+    string NomMois(int idMois) => new[]
+    {
+        "Janvier","Février","Mars","Avril","Mai","Juin",
+        "Juillet","Août","Septembre","Octobre","Novembre","Décembre"
+    }[idMois - 1];
+}
+
+<h2 class="mb-4">Mes Abonnements</h2>
+
+@if (abonnements == null || !abonnements.Any())
+{
+    <div class="alert alert-info">Aucun abonnement trouvé.</div>
+}
+else
+{
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="table-dark">
+        <tr>
+            <th>Mois</th>
+            <th>Année</th>
+            <th>Date de paiement</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var a in abonnements)
+        {
+            <tr>
+                <td>@NomMois(a.IdMois)</td>
+                <td>@a.Annee</td>
+                <td>@a.DatePaiement.ToString("dd/MM/yyyy")</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

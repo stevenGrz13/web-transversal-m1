@@ -1,0 +1,37 @@
+﻿@using Covoiturage.Models
+@{
+    ViewData["Title"] = "Trajets du véhicule";
+    var trajets = ViewData["trajets"] as List<Trajet>;
+    Layout = "_LayoutChauffeur";
+}
+
+<h2 class="mb-4">Trajets de ce véhicule</h2>
+
+@if (trajets == null || !trajets.Any())
+{
+    <div class="alert alert-info">Aucun trajet pour ce véhicule.</div>
+}
+else
+{
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+        <tr>
+            <th>Départ</th>
+            <th>Arrivée</th>
+            <th>Date de départ</th>
+            <th>Prix unique (par place)</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var t in trajets)
+        {
+            <tr>
+                <td>@t.Depart</td>
+                <td>@t.Arrivee</td>
+                <td>@t.DateDepart?.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>@t.PrixUniquePlace</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
