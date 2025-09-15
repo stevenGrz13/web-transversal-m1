@@ -106,7 +106,15 @@ namespace Covoiturage.Controllers
                 return Ok(new { success = false, message = "Identifiants incorrects." });
             }
 
-            return Ok(new { success = true, utilisateur });
+            int mois = DateTime.Now.Month;
+            int annee = DateTime.Now.Year;
+
+            bool abonnementExist = await _context.AbonnementUtilisateurs
+                .AnyAsync(a => a.IdUtilisateur == utilisateur.Id &&
+                               a.IdMois == mois &&
+                               a.Annee == annee);
+
+            return Ok(new { success = true, utilisateur, abonnement = abonnementExist });
         }
 
         // DELETE: api/UtilisateursApi/5

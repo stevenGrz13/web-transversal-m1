@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ntTPTOJbsW4=",
+  "dgSpecHash": "0eG98iDHhc4=",
   "success": true,
-  "projectFilePath": "D:\\STEVEN\\Etudes\\M1\\Web-Avance\\Projet-Transversal\\Covoiturage\\Covoiturage\\Covoiturage.csproj",
+  "projectFilePath": "D:\\STEVEN\\Exams\\M1\\transversal\\web-transversal-m1\\Covoiturage\\Covoiturage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\STEVEN\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\STEVEN\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

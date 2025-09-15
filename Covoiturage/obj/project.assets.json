@@ -8621,11 +8621,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\STEVEN\\Etudes\\M1\\Web-Avance\\Projet-Transversal\\Covoiturage\\Covoiturage\\Covoiturage.csproj",
+      "projectUniqueName": "D:\\STEVEN\\Exams\\M1\\transversal\\web-transversal-m1\\Covoiturage\\Covoiturage.csproj",
       "projectName": "Covoiturage",
-      "projectPath": "D:\\STEVEN\\Etudes\\M1\\Web-Avance\\Projet-Transversal\\Covoiturage\\Covoiturage\\Covoiturage.csproj",
+      "projectPath": "D:\\STEVEN\\Exams\\M1\\transversal\\web-transversal-m1\\Covoiturage\\Covoiturage.csproj",
       "packagesPath": "C:\\Users\\STEVEN\\.nuget\\packages\\",
-      "outputPath": "D:\\STEVEN\\Etudes\\M1\\Web-Avance\\Projet-Transversal\\Covoiturage\\Covoiturage\\obj\\",
+      "outputPath": "D:\\STEVEN\\Exams\\M1\\transversal\\web-transversal-m1\\Covoiturage\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\STEVEN\\AppData\\Roaming\\NuGet\\NuGet.Config"

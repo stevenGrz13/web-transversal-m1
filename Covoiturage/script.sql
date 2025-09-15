@@ -82,3 +82,26 @@ CREATE TABLE commission (
                          pourcentage DOUBLE PRECISION NOT NULL,
                          datedecision TIMESTAMP NOT NULL
 );
+
+-- Table : abonnement
+CREATE TABLE abonnement (
+                            id SERIAL PRIMARY KEY,
+                            montantpassager DOUBLE PRECISION NOT NULL,
+                            montantchauffeur DOUBLE PRECISION NOT NULL,
+                            datechangement TIMESTAMP NOT NULL
+);
+
+
+-- Table : abonnementutilisateur
+CREATE TABLE abonnementutilisateur (
+                                       id SERIAL PRIMARY KEY,
+                                       idutilisateur INT NOT NULL,
+                                       idmois INT NOT NULL,
+                                       annee INT NOT NULL,
+                                       datepaiement TIMESTAMP NOT NULL,
+                                       CONSTRAINT fk_abonnementutilisateur_utilisateur
+                                           FOREIGN KEY (idutilisateur)
+                                               REFERENCES utilisateur (id)
+                                               ON UPDATE CASCADE
+                                               ON DELETE CASCADE
+);

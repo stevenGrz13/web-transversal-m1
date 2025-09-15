@@ -17,4 +17,8 @@ public class CovoiturageContext : DbContext
     public DbSet<Voyage> Voyages { get; set; }
     public DbSet<Depense> Depenses { get; set; }
     public DbSet<Commission> Commission { get; set; }
+    
+    public DbSet<Abonnement> Abonnements { get; set; }
+    
+    public DbSet<AbonnementUtilisateur> AbonnementUtilisateurs { get; set; }
 }
