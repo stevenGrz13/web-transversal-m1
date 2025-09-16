@@ -44,6 +44,7 @@ public class HomeController : Controller
 
         HttpContext.Session.SetInt32("UserId", utilisateur.Id);
         HttpContext.Session.SetInt32("UserRole", utilisateur.IdRole);
+        HttpContext.Session.SetString("UserLogged", utilisateur.Nom);
 
         if (utilisateur.IdRole == 1) // chauffeur
         {
