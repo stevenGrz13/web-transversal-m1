@@ -1,6 +1,7 @@
 ﻿using Covoiturage.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore; 
+using System.Text.Json;
 
 namespace Covoiturage.Controllers;
 
@@ -32,13 +33,26 @@ public class TableaudeBordController : Controller
             ).Sum();
 
         double commission = (chiffreAffaire * pourcentageCommission) / 100.0;
-
         double depenseTotal = listeDepense.Sum(d => d.Montant);
-
         double benefice = commission - depenseTotal;
 
         int totalTrajets = listeTrajet.Count;
         int totalVoyagesPayes = _context.Voyages.Count(v => v.EstPayee == true);
+
+        // ----> NEW : données pour les charts
+        var pieData = new[] {
+            new { label = "Commission", value = commission },
+            new { label = "Dépenses", value = depenseTotal },
+            new { label = "Bénéfice", value = benefice }
+        };
+
+        var barData = new[] {
+            new { label = "Voyages payés", value = totalVoyagesPayes },
+            new { label = "Total trajets", value = totalTrajets }
+        };
+
+        ViewData["PieData"] = JsonSerializer.Serialize(pieData);
+        ViewData["BarData"] = JsonSerializer.Serialize(barData);
 
         ViewData["ChiffreAffaire"] = chiffreAffaire;
         ViewData["Commission"] = commission;

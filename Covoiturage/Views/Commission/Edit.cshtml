@@ -1,11 +1,11 @@
 @model Covoiturage.Models.Commission
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Modifier";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Edit</h1>
+<h1>Modifier</h1>
 
 <h4>Commission</h4>
 <hr />
@@ -15,23 +15,22 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="Pourcentage" class="control-label"></label>
+                <label asp-for="Pourcentage" class="control-label">Pourcentage</label>
                 <input asp-for="Pourcentage" class="form-control" />
                 <span asp-validation-for="Pourcentage" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DateDecision" class="control-label"></label>
+                <label asp-for="DateDecision" class="control-label">Date de décision</label>
                 <input asp-for="DateDecision" class="form-control" />
                 <span asp-validation-for="DateDecision" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Enregistrer" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Retour à la liste</a>
 </div>
-

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/Covoiturage.styles.css" asp-append-version="true"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         /* === Sidebar Professionnel === */
         .sidebar {
@@ -268,12 +269,6 @@
                                 Mon Profil
                             </a>
                         </li>
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                <i class="bi bi-gear"></i>
-                                Paramètres
-                            </a>
-                        </li>
                         <li><hr class="dropdown-divider"></li>
                         <li>
                             <a class="dropdown-item" asp-controller="Home" asp-action="LogOutAction">
@@ -320,7 +315,6 @@
                         <a class="nav-link" asp-controller="Utilisateur" asp-action="Index">
                             <i class="bi bi-people nav-icon"></i>
                             <span class="nav-text">Utilisateurs</span>
-                            <span class="nav-badge">12</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -353,21 +347,7 @@
                         </a>
                     </li>
                 </ul>
-
-                <!-- Footer avec profil utilisateur -->
-                <div class="sidebar-footer">
-                    <a class="nav-link" asp-controller="TableaudeBord" asp-action="Profil" style="margin: 0; padding: 0;">
-                        <div class="user-profile">
-                            <div class="user-avatar">
-                                <i class="bi bi-person-fill"></i>
-                            </div>
-                            <div>
-                                <div style="font-size: 0.85rem; font-weight: 600;">Mon Profil</div>
-                                <div style="font-size: 0.75rem; opacity: 0.8;">Paramètres</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                
             </div>
         </nav>
 

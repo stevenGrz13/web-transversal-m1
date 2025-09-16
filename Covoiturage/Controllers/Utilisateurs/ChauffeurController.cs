@@ -15,6 +15,16 @@ public class ChauffeurController : Controller
     
     private int? UserId => HttpContext.Session.GetInt32("UserId");
     
+    public IActionResult VersAcceuilChauffeur()
+    {
+        var derniereCommission = _context.Commission
+            .OrderByDescending(c => c.DateDecision)
+            .FirstOrDefault();
+
+        ViewData["PourcentageCommission"] = derniereCommission;
+        return View("~/Views/Home/AcceuilChauffeur.cshtml");
+    }
+    
     // GET
     public IActionResult Profil()
     {

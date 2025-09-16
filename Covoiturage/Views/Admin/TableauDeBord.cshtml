@@ -8,63 +8,65 @@
     var totalTrajets = (int)ViewData["TotalTrajets"];
     var totalVoyagesPayes = (int)ViewData["TotalVoyagesPayes"];
     var listeDepense = ViewData["ListeDepense"] as List<Covoiturage.Models.Depense>;
+
+    var pieData = (string)ViewData["PieData"];
+    var barData = (string)ViewData["BarData"];
 }
 
-<h2 class="mb-4"> Tableau de bord</h2>
+<h2 class="mb-4">Tableau de bord</h2>
 
+<!-- ======== INDICATEURS PRINCIPAUX ======== -->
 <div class="row text-center">
     <div class="col-md-3 mb-3">
-        <div class="card bg-success text-white">
+        <div class="card bg-success text-white shadow">
             <div class="card-body">
-                <h5>Chiffre d'affaires generee</h5>
-                <h3>@chiffreAffaire.ToString("N2") Ar</h3>
+                <h5>Chiffre d'affaires généré</h5>
+                <h3>@chiffreAffaire.ToString("N0") Ar</h3>
             </div>
         </div>
     </div>
-
     <div class="col-md-3 mb-3">
-        <div class="card bg-warning text-dark">
+        <div class="card bg-warning text-dark shadow">
             <div class="card-body">
                 <h5>Commission (@pourcentageCommission %)</h5>
-                <h3>@commission.ToString("N2") Ar</h3>
+                <h3>@commission.ToString("N0") Ar</h3>
             </div>
         </div>
     </div>
-
     <div class="col-md-3 mb-3">
-        <div class="card bg-primary text-white">
+        <div class="card bg-primary text-white shadow">
             <div class="card-body">
                 <h5>Bénéfice</h5>
-                <h3>@benefice.ToString("N2") Ar</h3>
+                <h3>@benefice.ToString("N0") Ar</h3>
             </div>
         </div>
     </div>
-
     <div class="col-md-3 mb-3">
-        <div class="card bg-danger text-white">
+        <div class="card bg-danger text-white shadow">
             <div class="card-body">
                 <h5>Total dépenses</h5>
-                <h3>@depenseTotal.ToString("N2") Ar</h3>
+                <h3>@depenseTotal.ToString("N0") Ar</h3>
             </div>
         </div>
     </div>
 </div>
 
-<div class="row text-center mt-3">
-    <div class="col-md-6 mb-3">
-        <div class="card bg-info text-white">
+<!-- ======== CHARTS ======== -->
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-dark text-white">Répartition du chiffre d'affaires</div>
             <div class="card-body">
-                <h5>Voyages payés</h5>
-                <h3>@totalVoyagesPayes</h3>
+                <canvas id="pieChart"></canvas>
             </div>
         </div>
     </div>
 
-    <div class="col-md-6 mb-3">
-        <div class="card bg-secondary text-white">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-dark text-white">Voyages payés vs Total trajets</div>
             <div class="card-body">
-                <h5>Total trajets</h5>
-                <h3>@totalTrajets</h3>
+                <canvas id="barChart"></canvas>
             </div>
         </div>
     </div>
@@ -72,8 +74,8 @@
 
 <hr />
 
-<h4> Dernières dépenses</h4>
-<table class="table table-striped table-bordered">
+<h4 class="mt-4">Dernières dépenses</h4>
+<table class="table table-striped table-bordered shadow-sm">
     <thead class="table-dark">
         <tr>
             <th>#</th>
@@ -88,9 +90,52 @@
         <tr>
             <td>@dep.Id</td>
             <td>@dep.Intitule</td>
-            <td>@dep.Montant.ToString("N2") Ar</td>
+            <td>@dep.Montant.ToString("N0") Ar</td>
             <td>@dep.Date.ToString("dd/MM/yyyy")</td>
         </tr>
     }
     </tbody>
 </table>
+
+@section Scripts {
+<script>
+    // Récupération des données passées depuis le Controller
+    const pieData = @Html.Raw(pieData);
+    const barData = @Html.Raw(barData);
+
+    // === PIE CHART ===
+    new Chart(document.getElementById('pieChart'), {
+        type: 'pie',
+        data: {
+            labels: pieData.map(x => x.label),
+            datasets: [{
+                data: pieData.map(x => x.value),
+                backgroundColor: ['#ffc107','#dc3545','#198754']
+            }]
+        },
+        options: {
+            plugins: {
+                legend: { position: 'bottom' }
+            }
+        }
+    });
+
+    // === BAR CHART ===
+    new Chart(document.getElementById('barChart'), {
+        type: 'bar',
+        data: {
+            labels: barData.map(x => x.label),
+            datasets: [{
+                label: 'Nombre',
+                data: barData.map(x => x.value),
+                backgroundColor: ['#0d6efd','#20c997']
+            }]
+        },
+        options: {
+            scales: {
+                y: { beginAtZero: true }
+            }
+        }
+    });
+</script>
+}

@@ -314,12 +314,13 @@
                             }
 
                             <!-- Role Selection -->
-                            <div class="role-selector">
-                                <div class="role-label">
-                                    <i class="bi bi-person-badge"></i>
+                            <div class="role-selector mb-3">
+                                <label for="idrole" class="form-label fw-semibold">
+                                    <i class="bi bi-person-badge me-2"></i>
                                     Sélectionnez votre rôle
-                                </div>
-                                <select name="idrole" id="idrole" class="form-select">
+                                </label>
+
+                                <select name="idrole" id="idrole" class="form-select shadow-sm border-primary">
                                     @foreach (var role in roles)
                                     {
                                         <option value="@role.Id">@role.Nom</option>

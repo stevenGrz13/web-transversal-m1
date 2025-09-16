@@ -48,7 +48,7 @@ public class HomeController : Controller
 
         if (utilisateur.IdRole == 1) // chauffeur
         {
-            return View("~/Views/Home/AcceuilChauffeur.cshtml"); 
+            return RedirectToAction("VersAcceuilChauffeur", "Chauffeur");
         }
         if (utilisateur.IdRole == 2) // passsager
         {

@@ -1,11 +1,11 @@
 @model Covoiturage.Models.Utilisateur
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Créer";
     Layout = "_LayoutAdmin";
 }
 
-<h1>Create</h1>
+<h1>Créer</h1>
 
 <h4>Utilisateur</h4>
 <hr />
@@ -15,7 +15,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="IdRole" class="control-label"></label>
-                <select asp-for="IdRole" class ="form-control" asp-items="ViewBag.IdRole"></select>
+                <select asp-for="IdRole" class="form-control" asp-items="ViewBag.IdRole"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Nom" class="control-label"></label>
@@ -39,13 +39,12 @@
             </div>
             <br/>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Créer" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Retour à la liste</a>
 </div>
-
