@@ -21,9 +21,36 @@ public class HomeController : Controller
         {
             ViewBag.message = TempData["messageerreur"];
         }
+        if (TempData["error"] != null)
+        {
+            ViewBag.error = TempData["error"];
+        }
         List<Role> listeRole = _context.Roles.ToList();
         ViewData["roles"] = listeRole;
         return View();
+    }
+    
+    [HttpPost]
+    public IActionResult Sinscrire(string Nom, string Email, string Numero, string MotDePasse, int IdRole)
+    {
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.Nom = Nom;
+        utilisateur.Email = Email;
+        utilisateur.MotDePasse = MotDePasse;
+        utilisateur.IdRole = IdRole;
+        utilisateur.Numero = Numero;
+        if (ModelState.IsValid)
+        {
+            utilisateur.CreatedAt = DateTime.UtcNow;
+            _context.Utilisateurs.Add(utilisateur);
+            _context.SaveChanges();
+
+            TempData["messageerreur"] = "Compte cree avec succès. Connectez-vous.";
+            return RedirectToAction("Login");
+        }
+
+        ViewData["roles"] = _context.Roles.ToList();
+        return View("Login");
     }
     
     [HttpPost]
@@ -37,9 +64,8 @@ public class HomeController : Controller
 
         if (utilisateur == null)
         {
-            // Identifiants invalides
-            ViewBag.Error = "Email, mot de passe ou rôle incorrect.";
-            return View("~/Views/Home/Login.cshtml"); // page de login
+            TempData["error"] = "Email, mot de passe ou rôle incorrect.";
+            return RedirectToAction("Login");
         }
 
         HttpContext.Session.SetInt32("UserId", utilisateur.Id);

@@ -1,4 +1,7 @@
-﻿-- ============================================
+﻿create database covoiturage;
+\c covoiturage
+
+-- ============================================
 -- TABLE : role
 -- ============================================
 CREATE TABLE role (
@@ -105,3 +108,5 @@ CREATE TABLE abonnementutilisateur (
                                                ON UPDATE CASCADE
                                                ON DELETE CASCADE
 );
+
+

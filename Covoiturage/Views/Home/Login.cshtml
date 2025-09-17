@@ -305,11 +305,11 @@
                                 </div>
                             </div>
 
-                            <!-- Error Message -->
-                            @if (ViewBag.message != null)
+                            @* <!-- Error Message --> *@
+                            @if (ViewBag.error != null)
                             {
                                 <div class="error-message">
-                                    <i class="bi bi-exclamation-triangle me-2"></i>@ViewBag.message
+                                    <i class="bi bi-exclamation-triangle me-2"></i>@ViewBag.error
                                 </div>
                             }
 
@@ -329,9 +329,14 @@
                             </div>
 
                             <!-- Login Button -->
-                            <button type="submit" class="btn-login">
+                            <button type="submit" class="btn-login mb-2">
                                 <i class="bi bi-box-arrow-in-right me-2"></i>
                                 Se connecter
+                            </button>
+                            <!-- Bouton qui ouvre le modal -->
+                            <button type="button" class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#inscriptionModal">
+                                <i class="bi bi-person-plus me-2"></i>
+                                S'inscrire
                             </button>
                         </form>
                     </div>
@@ -340,10 +345,62 @@
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
+<!-- Modal d'inscription -->
+<div class="modal fade" id="inscriptionModal" tabindex="-1" aria-labelledby="inscriptionModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="inscriptionModalLabel">Créer un compte</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form action="/Home/Sinscrire" method="post">
+          <div class="mb-3">
+            <label for="Nom" class="form-label">Nom</label>
+            <input name="Nom" class="form-control" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="Email" class="form-label">Email</label>
+            <input name="Email" type="email" class="form-control" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="MotDePasse" class="form-label">Mot de passe</label>
+            <input name="MotDePasse" type="password" class="form-control" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="Numero" class="form-label">Numéro</label>
+            <input name="Numero" class="form-control" />
+          </div>
+
+          <div class="mb-3">
+            <label for="IdRole" class="form-label">Rôle</label>
+            <select name="IdRole" class="form-select">
+                <option value="">-- Choisir --</option>
+                @foreach (var role in roles)
+                {
+                    <option value="@role.Id">@role.Nom</option>
+                }
+            </select>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+            <button type="submit" class="btn btn-primary">S'inscrire</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
-    <script>
+<script>
         // Effet d'entrée simple
         document.addEventListener('DOMContentLoaded', function() {
             const container = document.querySelector('.login-container');
@@ -381,5 +438,6 @@
             });
         });
     </script>
+
 </body>
 </html>

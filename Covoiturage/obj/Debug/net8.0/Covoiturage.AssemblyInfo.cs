@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Covoiturage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+328857a782f34cc673c5b3b10c985b2ba1063c02")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc541ae659d035da67e3af9c482bd2f97bcf8886")]
 [assembly: System.Reflection.AssemblyProductAttribute("Covoiturage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Covoiturage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
